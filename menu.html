@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap and font awesome  -->
+    <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/indulge.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Indulge | Menu</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-container">
+            <nav class="navbar navbar-expand-sm, navbar-dark bg-success nav-style" >
+                <a class="navbar-brand" href="indulge.html">Indulge</a>
+
+                <form class="form-inline">
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>   
+                        <button class="btn btn-outline-light my-2 my-sm-0 col-sm-2" type="button">
+                            <span class="fa fa-search"></span>
+                        </button>
+                    </div> 
+                </form>
+               
+                <a href="cart.html" class="btn btn-outline-light ml-auto cart-icon">
+                    <span class="fa fa-cart-plus"></span>
+                </a>
+            
+                <button class="navbar-toggler ml-2" type="button" 
+                    data-toggle="collapse" data-target="#nav1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav1">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="indulge.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="menu.html" class="nav-link">Menu</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="connect.html" class="nav-link">Let's Connect</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="row mb-2 mt-2">
+            <div class="col-4">
+                <h2 id="events" class="display-4">Menu</h2>
+                <hr>
+            </div>
+        </div>
+        <!-- row 1 light meals -->
+        <div class="row mb-2">
+            <div class="col-md-4">
+            <!-- cart preview -->
+            <span class="ml-auto" id="closeCart"><i class="fa fa-close"></i></span>
+            <div id="cart-container" class="d-flex flex-column flex-shrink-0 p-3 ">
+                
+                <h4>Shopping Cart</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Toatal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTable2">
+                    </tbody>
+                </table>
+                <h5 id="cartTotal2">Total : </h5>
+            </div>
+        </div>
+        <!-- light meals menu items -->
+        <div class="col-md-8 light-menu-items">
+            
+            <h2 id="light-meals" class="display-4">Light Meals</h2><br><br>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="https://img.taste.com.au/NKCEs_sX/w720-h480-cfill-q80/taste/2016/11/tomato-hummus-crostini-25282-1.jpeg"
+                            class="card-img-top img-thumbnail" width="100%" height="225" alt="Tomato & hummus crostini">
+                        <div class="card-body card-style">
+                            <p class="card-text">Tomato & hummus crostini</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group ml-auto mr-auto">
+                                    <button id="0"  type="button" class="btn btn-sm btn-success">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col">
+            
+                    <div class="card shadow-sm">
+                        <img src="https://img.taste.com.au/8bhSjhef/w720-h480-cfill-q80/taste/2016/11/antipasto-garlic-bread-45790-1.jpeg"
+                             class="card-img-top img-thumbnail" width="100%" height="225" alt="Antipasto garlic bread">
+                        <div class="card-body card-style">
+                            <p class="card-text">Antipasto garlic bread</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group ml-auto mr-auto">
+                                    <button id="1"  type="button" class="btn btn-sm btn-success">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="https://img.taste.com.au/1JcMzWLI/w720-h480-cfill-q80/taste/2016/11/bacon-and-cheese-croquettes-74345-1.jpeg" 
+                            class="card-img-top img-thumbnail" width="100%" height="225" alt="Bacon and cheese croquettes">
+                        <div class="card-body card-style">
+                            <p class="card-text">Bacon and cheese croquettes</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group ml-auto mr-auto">
+                                    <button id="2"  type="button" class="btn btn-sm btn-success">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- row 2 breakfast menu -->
+    <div class="row mb-2">
+        <div class="col-md-4">
+ 
+        </div>
+        <div class="col-md-8">
+            <!-- adding three menu items under the breakfast catergory -->
+            <h2 id="breakfast" class="display-4">Breakfast</h2><br><br>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="https://img.taste.com.au/OPy8lBpw/w720-h480-cfill-q80/taste/2020/06/july20_big-breakfast-pizza-162747-1.jpg" 
+                                class="card-img-top img-thumbnail" width="100%" height="225" alt="">
+                        <div class="card-body card-style">
+                            <p class="card-text">Big breakfast pizza</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group ml-auto mr-auto">
+                                    <!-- A button to view the menu item details (ingridents, price, add-on options...) -->
+                                    <button type="button" class="btn btn-sm btn-outline-success viewMore">View</button>
+                                    <button id="3"  type="button" class="btn btn-sm btn-success">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <!-- Adding an image thumbnail -->
+                        <img src="https://img.taste.com.au/72RU2lmW/w720-h480-cfill-q80/taste/2021/12/super-breakfast-bowl-175797-1.jpg"
+                            class="card-img-top img-thumbnail" width="100%" height="225" alt="Super breakfast bowl">
+                        <div class="card-body card-style">
+                            <p class="card-text">Super breakfast bowl</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group ml-auto mr-auto">
+                                    <button type="button" class="btn btn-sm btn-outline-success viewMore">View</button>
+                                    <button id="4" type="button" class="btn btn-sm btn-success">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="https://img.taste.com.au/1dydKVs-/w720-h480-cfill-q80/taste/2021/12/healthy-breakfast-tacos-175758-2.jpg" 
+                            class="card-img-top img-thumbnail" width="100%" height="225" alt="Healthy breakfast tacos">
+                        <div class="card-body card-style">
+                            <p class="card-text">Healthy breakfast tacos</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group ml-auto mr-auto">
+                                    <button type="button" class="btn btn-sm btn-outline-success viewMore">View</button>
+                                    <button id="5"  type="button" class="btn btn-sm btn-success">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div> 
+    
+   <h1>Delevery Options</h1>
+    <div class="row mb-2 mt-2">
+        
+        <div class="col-4">
+            <a href="https://www.mrdfood.com/">
+                <img src="https://order.kfc.co.za/Content/OnlineOrderingImages/StaticPage/delivery-blog/mrd.png" 
+                    width="200px" height="200px" alt="">
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="https://www.ubereats.com/za">
+                <img src="https://ristorantefratellimilano.com/wp-content/uploads/2020/11/Uber_eats_logo_2017_06_22.jpg"
+                width="200px" height="200px" alt="">
+            </a>
+        </div>
+    </div>
+
+    <script src="./assets/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/indulge.js"></script>
+    <script>
+        $(()=>{
+
+            document.querySelector('#closeCart').addEventListener('click',()=>{
+                $('#cart-container').slideUp(500);
+            })
+           
+            let _subTotal2 =0;
+
+            cart = JSON.parse(sessionStorage.getItem('cart'));
+            let tbody = document.querySelector("#cartTable2");
+
+            cart.forEach(product => {
+                let tr = document.createElement('tr');
+    
+                let tdImage = document.createElement('td');
+                let tdName = document.createElement('td');
+                let tdPrice = document.createElement('td');
+                let tdQuantity = document.createElement('td');
+                let tdTotal = document.createElement('td');
+
+                /**create the image tag and include the imgUrl as the src */
+                let productImg = document.createElement('img');
+                productImg.src = product.imageUrl;
+                productImg.setAttribute('width', '70px');
+                productImg.setAttribute('height', '50px');
+                tdImage.appendChild(productImg);
+                tr.appendChild(tdImage)
+
+                /**Product name */
+                tdName.innerHTML = product.name;
+                tr.appendChild(tdName);
+
+                /**price */
+                tdPrice.innerHTML = 'R' + product.price;
+                tr.appendChild(tdPrice);
+
+                /**Quantity */
+                let quantityInput = document.createElement('p');
+                quantityInput.innerHTML = product.quantity;
+                tdQuantity.appendChild(quantityInput);
+                tr.appendChild(tdQuantity);
+                tbody.appendChild(tr);
+
+                /**Row total*/ 
+                let rowTotal = product.price * product.quantity;
+                tdTotal.innerText = rowTotal;
+                tr.appendChild(tdTotal)
+
+                /**sub total*/ 
+                _subTotal2 = _subTotal2 + rowTotal;
+                document.querySelector('#cartTotal2').innerHTML = 'Total: ' + _subTotal2;
+        
+                /**getting the cart total*/ 
+                // subTotal = subTotal + product.price;
+            });
+
+            /** Animations */
+                let imgs = document.querySelectorAll('.card img');
+                imgs.forEach( img =>{
+                    img.click(()=>{
+                        $(this).animate(
+                            {height: '300px', opacity: '0.4'}, "slow"
+                        )
+                    })
+                })
+
+        });
+    </script>
+</body>
+</html>
