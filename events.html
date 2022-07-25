@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap and font awesome  -->
+
+    <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+
+    <!-- custom css -->
+    
+    <link rel="stylesheet" href="./assets/css/indulge.css">
+    
+    <!-- JQuery -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Indulge | Events</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-container">
+            <nav class="navbar navbar-expand-sm, navbar-dark bg-success nav-style" style="position: sticky;">
+                <a class="navbar-brand" href="indulge.html">Indulge</a>
+
+                <!-- Creating an inline form. A search function -->
+
+                <form class="form-inline">
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>   
+                        <button class="btn btn-outline-light my-2 my-sm-0 col-sm-2" type="button">
+                            <span class="fa fa-search"></span>
+                        </button>
+                    </div> 
+                </form>
+               
+                <a href="cart.html" class="btn btn-outline-light ml-auto cart-icon">
+                    <span class="fa fa-cart-plus"></span>
+                </a>
+            
+                <button class="navbar-toggler ml-2" type="button" 
+                    data-toggle="collapse" data-target="#nav1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="nav1">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="indulge.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">Menu</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a href="events.html" class="nav-link">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="connect.html" class="nav-link">Let's Connect</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="col-4">
+                <h2 id="events" class="display-4">Events</h2>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Creating 4 rows with 2 columns each -->
+    <!-- row 1 -->
+    <div class="row mb-4">
+        <!-- Event pic and booking functionality -->
+        <div class="col-4">
+            <div class="card shadow-sm">
+                <img src="https://images.squarespace-cdn.com/content/v1/55c493dfe4b0ce7f89394888/1591241216120-UX0KHXLO03TYY4TGWYXP/foodattable.jpg?format=1500w"
+                    height="250px" alt="" class="card-img-top img-fluid">
+                <div class="card-body card-style">
+                    <span class="fa fa-calendar"></span>
+                    2022-05-26 <a href="#" class="btn btn-outline-success">Get Ticket</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 event-discription">
+            <h2 class="display-4">Food Tasting</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum voluptas ratione quibusdam dolore.
+                Soluta illum veritatis sit iure odit nisi vitae officia, nesciunt ea?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi eos ut fuga consequuntur
+                impedit earum. Deleniti nemo, maiores quos a aperiam dicta officiis quibusdam?
+                Eaque aperiam labore aspernatur quos!</p>
+        </div>
+    </div>
+    <!-- row 2 -->
+    <div class="row mb-4">
+        <div class="col-8">
+            <h2 class="display-4">Music and Food Festival</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum voluptas ratione quibusdam dolore.
+                Soluta illum veritatis sit iure odit nisi vitae officia, nesciunt ea?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi eos ut fuga consequuntur
+                impedit earum. Deleniti
+                nemo, maiores quos a aperiam dicta officiis quibusdam?Eaque aperiam labore
+                aspernatur quos!</p>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/cover-for-Food-Festivals-In-South-Africa.jpg" height="250px" alt="" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <span class="fa fa-calendar"></span>
+                    2022-12-16 <a href="#" class="btn btn-outline-success">Get Ticket</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- row 3 -->
+    <div class="row mb-4">
+        <div class="col-4">
+            <div class="card">
+                <img src="https://dwu32cgxelq1c.cloudfront.net/local_newspapers/sites/30/2017/04/funrun_96049.jpg"
+                 height="250px" alt="fun run" 
+                    class="card-img-top img-fluid">
+                <div class="card-body card-style">
+                    <span class="fa fa-calendar"></span>
+                    2022-10-29 <a href="#" class="btn btn-outline-success">Get Ticket</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 event-discription">
+            <h2 class="display-4">5KM Fun Run</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum voluptas ratione quibusdam dolore.
+                Soluta illum veritatis sit iure odit nisi vitae officia, nesciunt ea?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi eos ut fuga consequuntur
+                impedit earum.
+                Deleniti nemo, maiores quos a aperiam dicta officiis quibusdam?
+                Eaque aperiam labore aspernatur quos!</p>
+        </div>
+    </div>
+    <!-- row 4 -->
+    <div class="row mb-4">
+        <div class="col-8">
+            <h2 class="display-4">Skills Development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum voluptas ratione quibusdam dolore.
+                Soluta illum veritatis sit iure odit nisi vitae officia, nesciunt ea?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi eos ut fuga consequuntur
+                impedit earum.
+                Deleniti
+                nemo, maiores quos a aperiam dicta officiis quibusdam?Eaque aperiam labore
+                aspernatur quos!</p>
+        </div>
+        <div class="col-4 evt1">
+            <div class="card">
+                <img src="https://www.eescorporation.com/wp-content/uploads/2021/08/Skill-Words-5.jpg" 
+                height="250px" alt="skills development" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <span class="fa fa-calendar"></span>
+                    2022-11-22 <a href="#" class="btn btn-outline-success">Get Ticket</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <script src="./assets/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/indulge.js"></script>
+</body>
+</html>
