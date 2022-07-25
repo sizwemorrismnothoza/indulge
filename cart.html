@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap and font awesome  -->
+    <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/indulge.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Indulge | Shopping Cart</title>
+</head>
+<body>
+    <div class="container">
+        <!-- navigation -->
+        <div class="menu-container">
+            <nav class="navbar navbar-expand-sm, navbar-dark bg-success nav-style" style="position: sticky;">
+                <a class="navbar-brand" href="indulge.html">Indulge</a>
+                <!-- Creating an inline form. A search function -->
+                <form class="form-inline">
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>   
+                        <button class="btn btn-outline-light my-2 my-sm-0 col-sm-2" type="button">
+                            <span class="fa fa-search"></span>
+                        </button>
+                    </div> 
+                </form>
+            
+                <a href="cart.html" class="btn btn-outline-light ml-auto cart-icon">
+                    <i class="fa fa-cart-arrow-down"></i>
+                </a>
+            
+                <button class="navbar-toggler ml-2" type="button" 
+                    data-toggle="collapse" data-target="#nav1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav1">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="indulge.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="menu.html" class="nav-link">Menu</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a href="events.html" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="connect.html" class="nav-link">Let's Connect</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="row mb-2 mt-2">
+            <div class="col-4">
+                <div id="nav">
+                    <a class="dropdown-toggle" href="#">Menu</a>
+                    <ul class="dropdown">
+                        <li><a href="menu.html#lightMeals">Light Meals</a></li>
+                        <li><a href="menu.html#breakfast">Breakfast</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+        
+
+        <div class="row mb-2 mt-2">
+            <div class="col-4">
+                <h2 id="events" class="display-4">Shopping Cart</h2>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Loading info from webstorage -->
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Remove</th>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Toatal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Delevery Options -->
+        <div class="row mb-2">
+            <div class="col-2">
+
+            </div>
+
+            <div class="col-8">
+                <fieldset>
+                    <legend>Delevery Options</legend>
+                    <div>
+                        <input type="radio" id="Collection" name="delevery" value="Collection"
+                                checked>
+                        <label for="Collection">Collection</label>
+                    </div>
+
+                    <div>   
+                        <input type="radio" id="Uber" name="delevery" value="Uber">
+                        <label for="Uber">Uber Eaats</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="MrD" name="delevery" value="MrD">
+                        <label for="MrD">Mr D</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="col-2">
+                
+            </div>
+        </div>
+
+        <!-- Payment and coupon -->
+        <div class="row mb-2">
+            <!-- coupon -->
+            <div class="col-5">
+                <div class="card shadow-sm">
+                    <h4>Coupon</h4>
+                    <p>Enter your coupon if you have one</p>
+                    <div class="row mb-2">
+                        <div class="col-6">
+                            <input type="text" id="txtCoupon" class="mb-2">
+                        </div>
+                        <div class="col-6">
+                            <a id="btnCoupon" class="btn btn-outline-success"> APPLY COUPON</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Total -->
+            <div class="col-7">
+                <div class="card shadow-sm">
+                    <h4>Checkout</h4>
+                    <p id="subTotal">Sub-total:</p>
+                    <p id="shipping">shipping:</p>
+                    <p id="vat">VAT</p>
+                    <hr>
+                    <P id="total">TOTAL:</P>
+                    <input type="text" id="btnConfrimOrder" value="Confirm Order" class="btn btn-success">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/indulge.js"></script>
+
+    <script>
+    
+        let _subTotal =0;
+        let _total = 0;
+        let _vat = 0;
+        let _shipping = 0
+
+        $(()=>{
+             /**Loading the cart info from the webstorage to the view */
+            cart = JSON.parse(sessionStorage.getItem('cart'));
+            
+            let tbody = document.querySelector("#cartTable");
+
+            cart.forEach(product => {
+                let tr = document.createElement('tr');
+            
+                let tdIcon = document.createElement('td');
+                let tdImage = document.createElement('td');
+                let tdName = document.createElement('td');
+                let tdPrice = document.createElement('td');
+                let tdQuantity = document.createElement('td');
+                let tdTotal = document.createElement('td');
+
+                /**Inserting the delete icon (td) and appending to tr */
+                let faIcon = document.createElement('i');
+                faIcon.classList.add('fa', 'fa-trash-o','fa-2x');
+                faIcon.addEventListener('click', () => { 
+                    alert('Removing ' + product.name + ' from the cart!')
+                    removeItem(product.name);
+                    document.location.reload(true);    
+                });
+                tdIcon.appendChild(faIcon);
+                tr.appendChild(tdIcon);
+            
+                /**create the image tag and include the imgUrl as the src */
+                let productImg = document.createElement('img');
+                productImg.src = product.imageUrl;
+                productImg.setAttribute('width', '150px');
+                productImg.setAttribute('height', '100px');
+                tdImage.appendChild(productImg);
+                tr.appendChild(tdImage)
+
+                /**Product name */
+                tdName.innerHTML = product.name;
+                tr.appendChild(tdName);
+
+                /**price */
+                tdPrice.innerHTML = 'R' + product.price;
+                tr.appendChild(tdPrice);
+
+                /**Quantity */
+                let quantityInput = document.createElement('input');
+                quantityInput.type = 'number';
+                quantityInput.value = product.quantity;
+                quantityInput.min = 1;
+                quantityInput.disabled = true;
+                quantityInput.addEventListener('change', (event) => { 
+                    console.log('row total before : ' + rowTotal);
+                    let difference = (product.price * event.target.value) - rowTotal;
+                    console.log('the difference is: '+difference);
+                    product.quantity = quantityInput.value;
+                    subTotal = rowTotal + difference;
+                    rowTotal = product.price * event.target.value;
+                    console.log('row total after : ' + rowTotal);
+                    console.log('New sub total: ' + subTotal);
+                    tdTotal.innerText = rowTotal; 
+    
+                })
+
+                tdQuantity.appendChild(quantityInput);
+                tr.appendChild(tdQuantity);
+                tbody.appendChild(tr);
+
+                /**Row total */
+                let rowTotal = product.price * product.quantity;
+                tdTotal.innerText = rowTotal;
+                tr.appendChild(tdTotal)
+
+                /**sub total */
+                _subTotal = _subTotal + rowTotal;
+                document.querySelector('#subTotal').innerHTML = 'Sub-total:' + _subTotal;
+            
+            });
+
+            /**Shipping */
+            let collectionBtn = document.querySelector('#Collection');
+            let uberBtn = document.querySelector('#Uber');
+            let MrDBtn = document.querySelector('#MrD')
+
+            collectionBtn.addEventListener('change', () => {
+                _shipping = 0;
+                vat = _subTotal * 0.14;
+                _total = _subTotal + _vat +_shipping;
+
+                $('#subTotal').innerHTML = 'Sub total R ' + _subTotal;
+                document.querySelector('#subTotal').innerHTML = 'Sub total R ' + _subTotal;
+                document.querySelector('#shipping').innerHTML = 'Shipping :' + _shipping;
+                document.querySelector('#vat').innerHTML = 'the Vat is: R ' + _vat;
+                document.querySelector('#total').innerHTML = 'Total: R ' + _total;
+            })
+    
+            uberBtn.addEventListener('change', () => {
+                _shipping = 35;
+                vat = _subTotal * 0.14;
+                _total = _subTotal + _vat +_shipping;
+
+                $('#subTotal').innerHTML = 'Sub total R ' + _subTotal;
+                document.querySelector('#subTotal').innerHTML = 'Sub total R ' + _subTotal;
+                document.querySelector('#shipping').innerHTML = 'Shipping :' + _shipping;
+                document.querySelector('#vat').innerHTML = 'the Vat is: R ' + _vat;
+                document.querySelector('#total').innerHTML = 'Total: R ' + _total;
+            })
+
+            MrDBtn.addEventListener('change', () => {
+                _shipping = 30;
+                vat = _subTotal * 0.14;
+                _total = _subTotal + _vat +_shipping;
+
+                $('#subTotal').innerHTML = 'Sub total R ' + _subTotal;
+                document.querySelector('#subTotal').innerHTML = 'Sub total R ' + _subTotal;
+                document.querySelector('#shipping').innerHTML = 'Shipping :' + _shipping;
+                document.querySelector('#vat').innerHTML = 'the Vat is: R ' + _vat;
+                document.querySelector('#total').innerHTML = 'Total: R ' + _total;
+            })
+
+            _vat = _subTotal * 0.14;
+            _total = _subTotal + _vat +_shipping;
+
+            $('#subTotal').innerHTML = 'Sub total R ' + _subTotal;
+            document.querySelector('#subTotal').innerHTML = 'Sub total R ' + _subTotal;
+            document.querySelector('#shipping').innerHTML = 'Shipping :' + _shipping;
+            document.querySelector('#vat').innerHTML = 'the Vat is: R ' + _vat;
+            document.querySelector('#total').innerHTML = 'Total: R ' + _total;
+
+            // Coupon
+            $('#btnCoupon').click(()=>{
+                let couponValue = document.querySelector('#txtCoupon').value;
+                applyCoupon(couponValue);
+            });
+
+            //confirm order
+            let confirmBtn = document.querySelector('#btnConfrimOrder');
+            confirmBtn.addEventListener('click', ()=>{
+                alert(
+                    'Confirm Order\n Sub total: R '+ _subTotal +
+                    '\nvat: R ' + _vat +
+                    '\nShipping: R ' + _shipping +
+                    '\nTotal: R' + _total  
+                );
+            });
+        });
+
+        function removeItem(product){
+            cartItems = JSON.parse(sessionStorage.getItem('cart'));
+            cartItems.pop(product);
+            sessionStorage.setItem('cart', JSON.stringify(cartItems));
+        }
+
+        function updateQuantity(product, updatedProduct) {
+            cart = JSON.parse(sessionStorage.getItem('cart'));
+            cart.pop(product);
+            cart.push(updatedProduct);
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateQuantity(product, updatedProduct) {
+            cart = JSON.parse(sessionStorage.getItem('cart'));
+            cart.pop(product);
+            cart.push(updatedProduct);
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function applyCoupon(_couponRef){
+            let couponRef = 'indulge369';
+            if(couponRef == _couponRef){
+                let discount  = _total * 0.1;
+                _total = _total - discount;
+                alert('you got 10% (R ' + discount + ' ) discount');
+                document.querySelector('#total').innerHTML = 'Total :R ' +  _total
+            }else{
+                alert('Invalid coupon reference. Please try again')
+            }
+        }
+    </script>
+</body>
+</html>
