@@ -1,0 +1,178 @@
+
+.welcome-container {
+  margin-top: 20%;
+  padding: 1em;
+}
+
+.container {
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: rgb(104, 88, 88);
+} 
+
+#home button {
+  padding: 1em;
+  font-size: x-large;
+  text-align: center;
+  display: inline-block;
+} 
+
+.home-button {
+  text-align: center; 
+  margin-top: 5%;
+  font-size: large;
+  padding: 2px 8px;
+}
+
+/* li{
+  list-style-type: square;
+} */
+
+.delevery-options img:hover{
+  width: 350px;
+  height: 300px;
+}
+/* 2 floating blocks */
+#article1{
+  float: right;
+}
+
+#article2{
+  float: left;
+}
+/* Animate background colours to change between different variants of
+colours */
+@keyframes rainbow-background {
+0% { background-color: #ff0000; }
+8.333% { background-color: #ff8000; }
+16.667% { background-color: #ffff00; }
+25.000% { background-color: #80ff00; }
+33.333% { background-color: #00ff00; }
+41.667% { background-color: #00ff80; }
+50.000% { background-color: #00ffff; }
+58.333% { background-color: #0080ff; }
+66.667% { background-color: #0000ff; }
+75.000% { background-color: #8000ff; }
+83.333% { background-color: #ff00ff; }
+91.667% { background-color: #ff0080; }
+100.00% { background-color: #ff0000; }
+}
+
+.RainbowBackground {
+animation: rainbow-background 7s infinite;
+}
+
+.Welcome-section {
+  margin-top: 10%;
+  border: green solid 2px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.slogan {
+  font-size: larger;
+}
+
+.event-discription {
+  background-color: #dddddd;
+}
+
+.menu-pic:hover {
+  background: green;
+  background-image: none;
+}
+
+.homeBackground {
+  background: url('../../img/crazy-good-beef-and-broccoli-3.jpg') center right/cover
+    no-repeat border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -1000; 
+}
+
+.cover {
+  background: rgb(173, 164, 164);
+  opacity: 0.75;
+  padding-bottom: 12em;
+  min-height: 100vh;
+}
+
+.nav-style {
+  padding: 2em;
+}
+
+.card-style {
+  background-color: #dddddd;
+} 
+
+.card-body li{
+  text-align: left;
+}
+
+.cart-icon{
+  color: white;
+}
+
+.non-empty::after{
+  content: var(--after-content);
+  border-radius: 50%;
+  width: 14px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  background-color: #00ff00;
+  color: white;
+}
+
+:root{
+  --after-content:'2'
+}
+
+
+/* add to cart */
+#cartTable input{
+  width: 25%;
+}
+
+.hide-cart{
+  visibility: hidden;
+}
+
+/*Dropdown menu*/
+a { 
+    text-decoration: none; color: #fff; 
+  }
+/**** ****/
+div#nav {
+   position: relative; 
+} 
+div#nav a {
+   padding: 5px 15px 5px; 
+   text-decoration: none;
+}
+.dropdown-toggle {
+   padding: 0; background: #218838; 
+}
+/**** ****/
+ul.dropdown { 
+  display: none; position: absolute; top: 100%;
+  margin-top: 5px; padding: 5px 5px 0 0; background: #218838;
+ }
+ul.dropdown li {
+   list-style-type: none; 
+  }
+ul.dropdown li a {
+   text-decoration: none; padding: 0em 1em; display: block; 
+}
+
+fieldset input{
+  
+    margin: .4rem;
+
+}
