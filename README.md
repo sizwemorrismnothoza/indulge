@@ -19,8 +19,6 @@ The purpose of this project is to apply my newly aquired skills.
 
 1. ![GitHub Logo](/images/logo.png)
 
-
-
 ## How to use   <a name="howTo"></a>
 
 
