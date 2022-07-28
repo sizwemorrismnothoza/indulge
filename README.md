@@ -17,7 +17,7 @@ The purpose of this project is to apply my newly aquired skills.
 
 *After downloading the code follow these steps*\
 
-1. 
+1. ![GitHub Logo](/images/logo.png)
 
 
 
